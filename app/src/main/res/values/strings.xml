@@ -35,6 +35,7 @@
     <string name="guardarInf">Guardar información</string>
     <string name="resultadoTec">Resultado de las tecnologías seleccionadas:</string>
     <string name="resultadoMod">Resultado de la modalidad seleccionada:</string>
+    <string name="resultadoCurso">Resultado del curso seleccionado:</string>
 
     <string name="descripcion_logo">Logo de Android</string>
 </resources>

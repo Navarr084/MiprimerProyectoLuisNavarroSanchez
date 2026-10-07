@@ -408,6 +408,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/resultadoTec"/>
 
+    <TextView
+        android:id="@+id/resultadoCurso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="60dp"
+        android:padding="5dp"
+        android:text="@string/resultadoMod"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/resultadoMod"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

@@ -1,9 +1,12 @@
 package com.example.retouno
 
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
 import android.widget.CheckBox
 import android.widget.CompoundButton
 import android.widget.RadioButton
+import android.widget.Spinner
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -22,8 +25,10 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var rbMixta: RadioButton
     private lateinit var resultadoTec: TextView
-
     private lateinit var resultadoMod: TextView
+    private lateinit var spinnerCurso: Spinner
+
+    private lateinit var resultadoCurso: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +48,8 @@ class MainActivity : AppCompatActivity() {
         rbOnline = findViewById(R.id.rbOnline)
         rbMixta = findViewById(R.id.rbMixta)
         resultadoMod = findViewById(R.id.resultadoMod)
+        spinnerCurso = findViewById(R.id.spinnerCurso)
+        resultadoCurso = findViewById(R.id.resultadoCurso)
 
         val listener = CompoundButton.OnCheckedChangeListener { _, _ ->
             actualizarTecnologias()
@@ -59,6 +66,19 @@ class MainActivity : AppCompatActivity() {
         rbOnline.setOnCheckedChangeListener(listenerMod)
         rbMixta.setOnCheckedChangeListener(listenerMod)
 
+        spinnerCurso.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                actualizarCurso()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
+        }
+
         actualizarTecnologias()
         actualizarModalidad()
     }
@@ -73,7 +93,7 @@ class MainActivity : AppCompatActivity() {
         resultadoTec.text = if (seleccionadas.isEmpty()) {
             "No has seleccionado ninguna tecnología"
         } else {
-            "Resultado de las tecnologías seleccionadas: " + seleccionadas.joinToString(", ")
+            "Las tecnologías seleccionadas: " + seleccionadas.joinToString(", ")
         }
     }
 
@@ -87,7 +107,19 @@ class MainActivity : AppCompatActivity() {
         resultadoMod.text = if (seleccionada.isEmpty()) {
             "No se ha seleccionado ninguna modalidad"
         } else {
-            "Resultado de la modalidad seleccionada: " + seleccionada.joinToString(", ")
+            "La modalidad seleccionada: " + seleccionada.joinToString(", ")
+        }
+    }
+
+    private fun actualizarCurso() {
+        val seleccionCurso = mutableListOf<String>()
+
+        if (spinnerCurso.isClickable) seleccionCurso.add(spinnerCurso.selectedItem.toString())
+
+        resultadoCurso.text = if (seleccionCurso.isEmpty()) {
+            "No se ha seleccionado ningún curso"
+        } else {
+            "El curso seleccionado: " + seleccionCurso.joinToString(", ")
         }
     }
 }
