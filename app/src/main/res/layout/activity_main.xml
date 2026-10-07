@@ -383,16 +383,30 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/resultado"
+        android:id="@+id/resultadoTec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="14dp"
         android:layout_marginTop="60dp"
         android:padding="5dp"
-        android:text="@string/resultado"
+        android:text="@string/resultadoTec"
         android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/boton2"/>
+
+    <TextView
+        android:id="@+id/resultadoMod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="60dp"
+        android:padding="5dp"
+        android:text="@string/resultadoMod"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/resultadoTec"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
