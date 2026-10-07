@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">RetoUno</string>
+    <!-- Primera pantalla -->
+    <string name="cabecera">Ejemplo de componentes de Android</string>
+    <string name="titulo1">Componentes para mostrar información</string>
+    <string name="texto1">Este texto se muestra mediante un textview</string>
+    <string name="progresion">Progreso: 50%</string>
+    <string name="tituloVideo">VideoView</string>
+    <string name="textoVideo">WebView</string>
+    <string name="dev">Developers</string>
+
+    <!-- Segunda pantalla -->
+    <string name="textFondo">Celebrating 5 Years of jetpack Compose!</string>
+    <string name="textNombre">Componentes de entrada e interacción</string>
+    <string name="nombre">Introduce tu nombre</string>
+    <string name="seleccionTec">Selecciona tu tecnología:</string>
+    <string name="seleccionMod">Selecciona tu modalidad:</string>
+    <string name="rbPresencial">Presencial</string>
+    <string name="rbAndroid">Android</string>
+    <string name="rbReact">React</string>
+    <string name="rbFlutter">Flutter</string>
+
+    <!-- Tercera pantalla -->
+    <string name="rbOnline">Online</string>
+    <string name="rbMixta">Mixta</string>
+    <string name="notificaciones">Notificaciones</string>
+    <string-array name="cursos_array">
+        <item>1.º DAM</item>
+        <item>2.º DAM</item>
+        <item>1.º DAW</item>
+        <item>2.º DAW</item>
+    </string-array>
+    <string name="seleccion">Selecciona un curso:</string>
+    <string name="nivel">Nivel seleccionado: 50</string>
+    <string name="guardarInf">Guardar información</string>
+    <string name="resultado">Aquí aparece el resultado</string>
+
+    <string name="descripcion_logo">Logo de Android</string>
+</resources>
